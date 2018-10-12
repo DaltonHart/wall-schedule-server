@@ -76,5 +76,7 @@ typings/
 # Serverless directories
 .serverless
 
-
+# google files 
+credentials.json
+token.json
 # End of https://www.gitignore.io/api/node
