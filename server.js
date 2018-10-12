@@ -7,6 +7,16 @@ const
   readline = require('readline'),
   {google} = require('googleapis')
 
+
+app.use(bodyParser.urlencoded({extended:true}));
+app.use(cors());
+  
+app.use(express.static(__dirname + '/public'));
+  
+app.get('/', (req, res) => {
+  res.sendFile('views/index.html' , { root : __dirname});
+})
+
   const SCOPES = ['https://www.googleapis.com/auth/calendar.readonly'];
   const TOKEN_PATH = 'token.json';
 
@@ -94,14 +104,6 @@ function listEvents(auth) {
   });
 }
 
-app.use(bodyParser.urlencoded({extended:true}));
-app.use(cors());
-
-app.use(express.static(__dirname + '/public'));
-
-app.get('/', (req, res) => {
-  res.sendFile('views/index.html' , { root : __dirname});
-})
 
 app.listen(process.env.PORT || 5000, ()=>{
     console.log('Listening to port 5000');
