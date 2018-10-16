@@ -1,3 +1,28 @@
-*{
-    background-color: grey;
+body{
+    background-color: whitesmoke;
 }
+
+#bart {
+    width: 30vw;
+    background-color: azure;
+}
+
+#bart h3 {
+    height: 7vh;
+    font-size: 1.7em;
+    text-align: center;
+    background-color: rgb(2, 123, 172);
+    color: white;
+    margin: 0;
+    padding: .5em;
+}
+
+#list{
+    padding: 0 .5em;
+    padding-bottom: .5em;
+    text-align: center;
+}
+ul {
+    list-style: none;
+    padding: 0;
+  }
